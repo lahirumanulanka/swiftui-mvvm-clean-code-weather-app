@@ -1,10 +1,11 @@
 # ropt in rules
 opt_in_rules:
-    - force_unwrapping
+#    - force_unwrapping
     
 # rules to disable
 disabled_rules:
     - line_length
+    - identifier_name
     - function_body_length
     - cyclomatic_complexity
     - function_parameter_count

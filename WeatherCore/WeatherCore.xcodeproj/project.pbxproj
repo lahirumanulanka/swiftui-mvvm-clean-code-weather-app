@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0D945F2B976476006BCAD9 /* ProjectConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D945E2B976476006BCAD9 /* ProjectConfiguration.swift */; };
 		4CB5F19B2B96EF2100D10CDA /* WeatherCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB5F1922B96ECBD00D10CDA /* WeatherCore.h */; };
 		4CF5AF1A2B96D42A00B2E352 /* Model.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF5AF192B96D42A00B2E352 /* Model.framework */; };
 		4CF5AF1B2B96D42A00B2E352 /* Model.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4CF5AF192B96D42A00B2E352 /* Model.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		0C87990983374A618B90C094 /* Pods-weatherCore-WeatherCore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-weatherCore-WeatherCore.debug.xcconfig"; path = "Target Support Files/Pods-weatherCore-WeatherCore/Pods-weatherCore-WeatherCore.debug.xcconfig"; sourceTree = "<group>"; };
+		4C0D945E2B976476006BCAD9 /* ProjectConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfiguration.swift; sourceTree = "<group>"; };
 		4CB5F1922B96ECBD00D10CDA /* WeatherCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherCore.h; sourceTree = "<group>"; };
 		4CF5AEFA2B96D38900B2E352 /* WeatherCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WeatherCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF5AF122B96D3A200B2E352 /* Color+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0D945D2B976476006BCAD9 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D945E2B976476006BCAD9 /* ProjectConfiguration.swift */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
 		4CF5AEF02B96D38900B2E352 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +84,7 @@
 		4CF5AEFC2B96D38900B2E352 /* WeatherCore */ = {
 			isa = PBXGroup;
 			children = (
+				4C0D945D2B976476006BCAD9 /* Class */,
 				4CF5AF142B96D3A200B2E352 /* Extentions */,
 				4CF5AEFB2B96D38900B2E352 /* Products */,
 				4CF5AF182B96D42A00B2E352 /* Frameworks */,
@@ -225,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF5AF382B96D73000B2E352 /* Color+Extensions.swift in Sources */,
+				4C0D945F2B976476006BCAD9 /* ProjectConfiguration.swift in Sources */,
 				4CF5AF392B96D73300B2E352 /* String+Extention.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +384,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -405,7 +417,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

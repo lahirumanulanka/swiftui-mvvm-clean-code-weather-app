@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0D945C2B976413006BCAD9 /* ProjectConfigurationKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0D945B2B976413006BCAD9 /* ProjectConfigurationKey.swift */; };
 		4CB5F1992B96EF1B00D10CDA /* Model.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB5F1902B96ECB600D10CDA /* Model.h */; };
 		4CF5AEDA2B96CDC400B2E352 /* DataParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5AED82B96CDC300B2E352 /* DataParams.swift */; };
 		4CF5AEDB2B96CDC400B2E352 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5AED92B96CDC400B2E352 /* Weather.swift */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C0D945B2B976413006BCAD9 /* ProjectConfigurationKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectConfigurationKey.swift; sourceTree = "<group>"; };
 		4CB5F1902B96ECB600D10CDA /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
 		4CF5AE9E2B96C9CA00B2E352 /* Model.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Model.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF5AED82B96CDC300B2E352 /* DataParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataParams.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C0D945A2B976413006BCAD9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D945B2B976413006BCAD9 /* ProjectConfigurationKey.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		4CF5AE942B96C9CA00B2E352 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +66,7 @@
 		4CF5AEA02B96C9CA00B2E352 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C0D945A2B976413006BCAD9 /* Config */,
 				4CF5AED72B96CDAC00B2E352 /* WeatherList */,
 				4CB5F1902B96ECB600D10CDA /* Model.h */,
 			);
@@ -196,6 +207,7 @@
 			files = (
 				4CF5AEDB2B96CDC400B2E352 /* Weather.swift in Sources */,
 				4CF5AEDA2B96CDC400B2E352 /* DataParams.swift in Sources */,
+				4C0D945C2B976413006BCAD9 /* ProjectConfigurationKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

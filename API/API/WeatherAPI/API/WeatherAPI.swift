@@ -7,14 +7,6 @@ enum WeatherAPI: RequestProtocol {
 
 extension WeatherAPI {
 
-    var environment: Enviroment {
-        return NetworkManager.environment
-    }
-
-    var baseURL: ServiceEnviroment {
-        return ServiceEnviroment(baseURL: environment.baseURL)
-    }
-
     var endpoint: String {
         switch self {
         case .getWeather:

@@ -7,15 +7,18 @@
 
 import Foundation
 import UIKit
+import Model
+import WeatherCore
 
 public struct RequestService: RequestServiceProtocol {
 
     public init() {}
 
     public func fetchData<T: Decodable>(request: RequestProtocol) async throws -> T {
-        let urlString = request.baseURL.pathURL(endpoint: request.endpoint)
+        let baseURL = ProjectConfiguration.value(for: .BASE_URL)
+        let urlString = "https://" + baseURL + request.endpoint
         guard var urlRequest = getURLRequest(urlString: urlString, request) else {
-            preconditionFailure("Can't create URL")
+            fatalError("Failed to create URL for API call")
         }
         configRequestMethods(request: request, urlRequest: &urlRequest)
         return try await urlSessionRequest(urlRequest: urlRequest)

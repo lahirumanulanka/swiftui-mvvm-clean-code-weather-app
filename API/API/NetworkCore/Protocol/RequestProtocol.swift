@@ -8,7 +8,6 @@
 import Foundation
 
 public protocol RequestProtocol {
-    var baseURL: ServiceEnviroment { get }
     var endpoint: String { get }
     var httpMethod: HTTPMethod { get }
     var parameters: [String: Any] { get }

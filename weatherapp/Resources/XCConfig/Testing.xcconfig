@@ -1,0 +1,19 @@
+//
+//  Staging.xcconfig
+//  weatherapp
+//
+//  Created by Lahiru Munasinghe on 2024-03-05.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+//**************************
+//Project Setup
+//**************************
+PRODUCT_BUNDLE_IDENTIFIER = com.Testing.weatherapp
+PRODUCT_NAME = Testing - Weather APP
+
+//**************************
+//Environment Setup
+//**************************
+BASE_URL = api.openweathermap.org
