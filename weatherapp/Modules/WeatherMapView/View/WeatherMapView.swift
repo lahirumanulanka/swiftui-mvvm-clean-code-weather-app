@@ -4,11 +4,11 @@ import NavigationStack
 
 struct WeatherMapView: View {
     @ObservedObject var viewModel: WeatherListViewModel
-    
+
     @State var coordinateRegion = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 37.7666, longitude: -122.4511),
         span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
-    
+
     var body: some View {
         ZStack {
             Map(coordinateRegion: $coordinateRegion,
@@ -30,12 +30,12 @@ struct WeatherMapView: View {
                             .font(.system(size: 10))
                             .fontWeight(.bold)
                             .padding(.top, 55)
-                        
+
                     }
                 }
             }.edgesIgnoringSafeArea(.all)
             VStack {
-                HStack{
+                HStack {
                     Spacer()
                     PopView {
                         Image("list")
@@ -43,7 +43,7 @@ struct WeatherMapView: View {
                             .scaledToFit()
                             .frame(width: 30, height: 30)
                     }
-                    
+
                 }
                 .padding(.top, 10)
                 .padding(.trailing, 40)

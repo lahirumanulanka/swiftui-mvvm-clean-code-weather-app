@@ -7,13 +7,13 @@
 import Foundation
 
 public struct ServiceEnviroment {
-    
+
     var baseURL: String
-    
+
     init(baseURL: String = "") {
         self.baseURL = baseURL
     }
-    
+
     func pathURL(endpoint: String) -> String {
         return "\(baseURL)\(endpoint)"
     }

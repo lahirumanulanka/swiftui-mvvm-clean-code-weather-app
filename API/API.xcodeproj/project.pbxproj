@@ -21,6 +21,7 @@
 		4CF5AF4F2B96D84A00B2E352 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5AF4E2B96D84A00B2E352 /* APIRequest.swift */; };
 		4CF5AF512B96D88700B2E352 /* APIResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5AF502B96D88700B2E352 /* APIResponses.swift */; };
 		4CF5AF552B96DBAD00B2E352 /* WeatherListDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF5AF542B96DBAD00B2E352 /* WeatherListDataManager.swift */; };
+		B32B5394E3D49450F809B0B1 /* Pods_api_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4C78FDB8C95DA734912892 /* Pods_api_API.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +39,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		12A772A2DC72D2CA80B7D94B /* Pods-api-API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-api-API.release.xcconfig"; path = "Target Support Files/Pods-api-API/Pods-api-API.release.xcconfig"; sourceTree = "<group>"; };
+		4A4C78FDB8C95DA734912892 /* Pods_api_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_api_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB5F18E2B96ECAF00D10CDA /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		4CF5AE8A2B96C9B500B2E352 /* API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CF5AED52B96CD8800B2E352 /* WeatherAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherAPI.swift; sourceTree = "<group>"; };
@@ -53,6 +56,7 @@
 		4CF5AF4E2B96D84A00B2E352 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		4CF5AF502B96D88700B2E352 /* APIResponses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResponses.swift; sourceTree = "<group>"; };
 		4CF5AF542B96DBAD00B2E352 /* WeatherListDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherListDataManager.swift; sourceTree = "<group>"; };
+		7D2DA81B8D1769176E4EB1BA /* Pods-api-API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-api-API.debug.xcconfig"; path = "Target Support Files/Pods-api-API/Pods-api-API.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CF5AF1F2B96D46000B2E352 /* Model.framework in Frameworks */,
+				B32B5394E3D49450F809B0B1 /* Pods_api_API.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +78,7 @@
 				4CF5AE8C2B96C9B500B2E352 /* API */,
 				4CF5AE8B2B96C9B500B2E352 /* Products */,
 				4CF5AF1D2B96D46000B2E352 /* Frameworks */,
+				62A99A3124736DF468A4D22A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +114,7 @@
 			children = (
 				4CF5AF222B96D48400B2E352 /* WeatherCore.framework */,
 				4CF5AF1E2B96D46000B2E352 /* Model.framework */,
+				4A4C78FDB8C95DA734912892 /* Pods_api_API.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,6 +175,16 @@
 			path = NetworkCore;
 			sourceTree = "<group>";
 		};
+		62A99A3124736DF468A4D22A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D2DA81B8D1769176E4EB1BA /* Pods-api-API.debug.xcconfig */,
+				12A772A2DC72D2CA80B7D94B /* Pods-api-API.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -186,6 +203,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CF5AE912B96C9B500B2E352 /* Build configuration list for PBXNativeTarget "API" */;
 			buildPhases = (
+				E23F4879CB5A777217AC1DD4 /* [CP] Check Pods Manifest.lock */,
 				4CF5AE852B96C9B500B2E352 /* Headers */,
 				4CF5AE862B96C9B500B2E352 /* Sources */,
 				4CF5AE872B96C9B500B2E352 /* Frameworks */,
@@ -242,6 +260,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E23F4879CB5A777217AC1DD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-api-API-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4CF5AE862B96C9B500B2E352 /* Sources */ = {
@@ -392,6 +435,7 @@
 		};
 		4CF5AE922B96C9B500B2E352 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D2DA81B8D1769176E4EB1BA /* Pods-api-API.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -424,6 +468,7 @@
 		};
 		4CF5AE932B96C9B500B2E352 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A772A2DC72D2CA80B7D94B /* Pods-api-API.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

@@ -2,12 +2,12 @@ import SwiftUI
 
 struct SearchView: View {
     @Binding var text: String
-    
+
     var body: some View {
-        ZStack{
+        ZStack {
             Color.gray
                 .opacity(0.5)
-            HStack{
+            HStack {
                 Image(systemName: "magnifyingglass")
                 TextField("Search for a city", text: $text)
                 Spacer()

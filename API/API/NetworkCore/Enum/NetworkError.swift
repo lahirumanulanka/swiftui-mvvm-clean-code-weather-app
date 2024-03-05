@@ -16,24 +16,23 @@ enum NetworkError: Error, CustomStringConvertible {
     case parsing(DecodingError?)
     case errorRespone(errorMsg: String)
     case unknown
-    
+
     var localizedDescription: String {
         switch self {
         case .tokenExpire:
             return "Token Expire"
         case .badURL, .parsing, .noToken, .unknown:
             return "Sorry, something went wrong."
-        case .badResponse(_):
+        case .badResponse:
             return "Sorry, the connection to our server failed."
         case .url(let error):
             return error?.localizedDescription ?? "Something wend wrong"
-        case .errorRespone(_):
+        case .errorRespone:
             return "Sorry, the connection to our server failed."
         }
-        
-        
+
     }
-    
+
     var description: String {
         switch self {
         case .tokenExpire: return "Token Expire"

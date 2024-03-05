@@ -2,15 +2,15 @@ import Foundation
 import MapKit
 // MARK: - Weather
 public struct Weather: Codable, Hashable, Identifiable {
-    
+
     public static func == (lhs: Weather, rhs: Weather) -> Bool {
         return lhs.id == rhs.id
     }
-    
+
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }
-    
+
     public let id: Int
     public let name: String
     public let coord: Coord
@@ -20,11 +20,11 @@ public struct Weather: Codable, Hashable, Identifiable {
     public let sys: Sys
     public let clouds: Clouds
     public let weather: [WeatherElement]
-    
+
     public var coordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(latitude: coord.lat, longitude: coord.lon)
     }
-    
+
 }
 
 // MARK: Weather convenience initializers and mutators

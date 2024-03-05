@@ -3,8 +3,8 @@ import WeatherCore
 
 struct TitleView: View {
     var body: some View {
-        ZStack{
-            HStack{
+        ZStack {
+            HStack {
                 Text("Weather")
                     .font(.title)
                     .bold()

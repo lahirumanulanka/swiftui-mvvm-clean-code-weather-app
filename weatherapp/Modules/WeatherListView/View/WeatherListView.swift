@@ -3,12 +3,10 @@ import NavigationStack
 import Model
 import WeatherCore
 
-import SwiftUI
-
 struct WeatherListView: View {
     @ObservedObject var viewModel: WeatherListViewModel
     @State var searchText: String = ""
-    
+
     var body: some View {
         NavigationView {
             List(viewModel.weatherDataArray.filter {

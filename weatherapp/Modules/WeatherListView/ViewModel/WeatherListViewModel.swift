@@ -9,13 +9,13 @@ protocol WeatherListViewModelProtocol: AnyObject {
 
 class WeatherListViewModel: NSObject, ObservableObject, WeatherListViewModelProtocol {
     var manager: WeatherListDataManagerProtocol?
-    
+
     @Published var weatherDataArray: [Weather] = [Weather]()
     @Published var isLoginSuccess = false
     @Published var isAlertPresented: Bool = false
     @Published var errorMessage: String?
     internal var loadingState: LoadingStateProtocol = LoadingState()
-    
+
     init(manager: WeatherListDataManagerProtocol = WeatherListDataManager(),
          loading: LoadingStateProtocol = LoadingState()) {
         super.init()

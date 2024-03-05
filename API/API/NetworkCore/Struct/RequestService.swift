@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 
 public struct RequestService: RequestServiceProtocol {
-    
+
     public init() {}
-    
+
     public func fetchData<T: Decodable>(request: RequestProtocol) async throws -> T {
         let urlString = request.baseURL.pathURL(endpoint: request.endpoint)
         guard var urlRequest = getURLRequest(urlString: urlString, request) else {
@@ -20,13 +20,13 @@ public struct RequestService: RequestServiceProtocol {
         configRequestMethods(request: request, urlRequest: &urlRequest)
         return try await urlSessionRequest(urlRequest: urlRequest)
     }
-    
+
     public func getURLRequest(urlString: String, _ request: RequestProtocol) -> URLRequest? {
         guard let url = URL(string: urlString), var urlComponent = URLComponents(url: url, resolvingAgainstBaseURL: true) else { return nil }
         if request.queryItems.count > 0 { urlComponent.queryItems = request.queryItems }
         return URLRequest(url: urlComponent.url!)
     }
-    
+
     public func configRequestMethods(request: RequestProtocol, urlRequest: inout URLRequest) {
         switch request.httpMethod {
         case .POST, .PUT:
@@ -41,7 +41,7 @@ public struct RequestService: RequestServiceProtocol {
             urlRequest.httpMethod = request.httpMethod.rawValue
         }
     }
-    
+
     public func urlSessionRequest<T: Decodable>(urlRequest: URLRequest) async throws -> T {
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         debugPrint(response)
@@ -63,6 +63,3 @@ public struct RequestService: RequestServiceProtocol {
         }
     }
 }
-
-
-

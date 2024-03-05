@@ -6,42 +6,42 @@ enum WeatherAPI: RequestProtocol {
 }
 
 extension WeatherAPI {
-    
+
     var environment: Enviroment {
         return NetworkManager.environment
     }
-    
+
     var baseURL: ServiceEnviroment {
         return ServiceEnviroment(baseURL: environment.baseURL)
     }
-    
+
     var endpoint: String {
         switch self {
         case .getWeather:
             return "/data/2.5/find"
         }
     }
-    
+
     var httpMethod: HTTPMethod {
         switch self {
         case .getWeather:
             return .GET
         }
     }
-    var parameters: [String : Any] {
+    var parameters: [String: Any] {
         switch self {
         case .getWeather:
             return .init()
         }
     }
-    
+
     var formBody: Data {
         switch self {
         case .getWeather:
             return .init()
         }
     }
-    
+
     var queryItems: [URLQueryItem] {
         switch self {
         case .getWeather(let dataParams):
@@ -55,19 +55,15 @@ extension WeatherAPI {
                 URLQueryItem(name: "appid",
                              value: "\(dataParams.appid)"),
                 URLQueryItem(name: "units",
-                             value: "\(dataParams.units)"),
+                             value: "\(dataParams.units)")
             ]
         }
     }
-    
-    var headers: [String : String] {
+
+    var headers: [String: String] {
         switch self {
         case .getWeather:
-            return ["Content-Type" : "application/json; charset=utf-8"]
+            return ["Content-Type": "application/json; charset=utf-8"]
         }
     }
 }
-
-
-
-

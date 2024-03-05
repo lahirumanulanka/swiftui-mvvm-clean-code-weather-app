@@ -8,11 +8,11 @@ public protocol WeatherListDataManagerProtocol {
 
 public class WeatherListDataManager: WeatherListDataManagerProtocol {
     public var requestService: RequestServiceProtocol
-    
+
     public init(_ requestService: RequestServiceProtocol = RequestService()) {
         self.requestService = requestService
     }
-    
+
     public func fetchWeatherData(_ dataParams: DataParams) async throws -> ResponseResult<Weather> {
         do {
             let weatherData: ResponseResult<Weather> = try await requestService.fetchData(request: WeatherAPI.getWeather(dataParams))
@@ -22,4 +22,3 @@ public class WeatherListDataManager: WeatherListDataManagerProtocol {
         }
     }
 }
-

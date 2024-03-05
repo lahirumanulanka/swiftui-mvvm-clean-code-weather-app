@@ -3,10 +3,10 @@ import SwiftUI
 struct HeaderIconView: View {
     var clicked: (() -> Void)
     @Environment(\.colorScheme) private var colorScheme
-    
+
     var body: some View {
-        ZStack{
-            HStack{
+        ZStack {
+            HStack {
                 Spacer()
                 Button(action: clicked) {
                     Image(systemName: "map")
