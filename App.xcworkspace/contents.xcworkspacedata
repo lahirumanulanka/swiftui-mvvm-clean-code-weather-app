@@ -2,13 +2,13 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:WeatherCore/WeatherCore.xcodeproj">
+      location = "group:API/API.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Model/Model.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:API/API.xcodeproj">
+      location = "group:WeatherCore/WeatherCore.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:weatherapp.xcodeproj">

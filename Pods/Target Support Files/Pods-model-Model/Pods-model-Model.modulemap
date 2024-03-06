@@ -1,6 +1,0 @@
-framework module Pods_model_Model {
-  umbrella header "Pods-model-Model-umbrella.h"
-
-  export *
-  module * { export * }
-}
